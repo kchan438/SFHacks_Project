@@ -18,6 +18,9 @@ function timer(){
         hours.value = 0;
         minutes.value = 0;
         seconds.value = 0;
+        startButton.innerHTML = "START";
+        clearInterval(startTimer);
+        startTimer = -1;
     }
     else if(seconds.value != 0){
         seconds.value--;
