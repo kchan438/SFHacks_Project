@@ -13,18 +13,25 @@ document.getElementById('addButton').onclick = function() {
     checkbox.value = 'value';
     checkbox.class = 'checkboxes';
     checkbox.htmlFor = 'liItems';
+    checkbox.checked = false;
     li.appendChild(checkbox);
     li.appendChild(document.createTextNode(text));
     ul.appendChild(li);
     backendList.push(text);
     checkboxList.push(checkbox);
     console.log(checkboxList);
-    chrome.storage.sync.set({list: backendList, checkList: checkbooxList}, function() {
+    chrome.storage.sync.set({list: backendList, checkList: checkboxList}, function() {
         // console.log('here is the value: ' + list );
         // console.log('here is the checkboxlist: ' + checkList);
         // console.log('backend: ' + backendList[0]);
     });
     document.getElementById("textInput").value = "";
+}
+
+//happens when removeArray button is clicked, for testing purposes
+document.getElementById('removeButton').onclick = function () {
+    chrome.storage.sync.clear();
+    location.reload();
 }
 
 //happens when the page loads
@@ -51,8 +58,7 @@ window.onload = function() {
             checkbox.type = 'checkbox';
             checkbox.value = 'value';
             checkbox.class = 'checkboxes';
-            checkbox.htmlFor = 'liItems';
-            checkbox.checked = false;
+            checkbox.htmlFor = 'liItem' + i.toString();
             li.appendChild(checkbox);
             backendList[i] = text[i];
             // console.log('backendList: ' + backendList[i]);
@@ -60,17 +66,17 @@ window.onload = function() {
             li.appendChild(document.createTextNode(backendList[i]));
             ul.appendChild(li);
         }
+        console.log(checkboxList);
         // console.log('backend array: ' + backendList);
     });
 }
 
-for(var i = 0; i < checkboxList.length; i++) {
-    checkboxList[i].onchange = function () {
-        for(var i = 0; i < checkboxList.length; i++) {
-            if(document.getElementById('checkbox' + i.toString()).checked === true) {
-                console.log('test');
-                document.getElementById('checkbox' + i.toString()).style.textDecoration = 'line-through';
-            }
+//when each checkbox is checked
+checkboxList.onchange = function () {
+    for(var i = 0; i < checkboxList.length; i++) {
+        if(document.getElementById('checkbox' + i.toString()).checked) {
+            console.log('test');
+            document.getElementById('checkbox' + i.toString()).style.textDecoration = 'line-through';
         }
-    };
-}
+    }
+};
