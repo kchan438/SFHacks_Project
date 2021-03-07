@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+	font-size: 12px;
 }
 
 body {
@@ -63,7 +64,7 @@ div.postbody {
 
 .createNote {
 	margin: 1em 1em;
-	border: 2px solid black;
+	border: 1.5px solid black;
 }
 
 .create {
@@ -86,4 +87,8 @@ div.postbody {
 
 header {
 	margin: 1em 2em;
+}
+
+button:hover {
+	background-color: rgba(0, 0, 0, 0.1);
 }
