@@ -1,0 +1,89 @@
+html {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #e4ede5;
+}
+
+span {
+	margin-right: 1em;
+	cursor: pointer;
+}
+
+span:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+
+ul {
+	margin: 2em 0.1em;
+}
+
+.main {
+	background-color: #b9beb9;
+	width: 300px;
+	height: 300px;
+	border-radius: 3px;
+	box-shadow: 2px 2px 2px rgba(174, 247, 92, 0.705);
+}
+
+.header {
+	margin: 1.25em 0;
+	display: inline;
+	background-color: bisque;
+}
+
+aside {
+	border: 3px solid black;
+}
+
+h1 {
+	margin: auto;
+}
+
+div.postbody {
+	display: inline;
+}
+
+[placeholder]:empty:before {
+	content: attr(placeholder);
+	color: rgb(2, 2, 2);
+	opacity: 0.5;
+	cursor: text;
+}
+
+[contenteditable]:focus {
+	outline: 0 solid transparent;
+}
+
+[placeholder]:empty:focus:before {
+	content: "";
+}
+
+.createNote {
+	margin: 1em 1em;
+	border: 2px solid black;
+}
+
+.create {
+	margin-left: 90%;
+}
+
+.container {
+	display: flex;
+	margin: 0 0;
+}
+
+.timer {
+	display: flex;
+	margin: 0 0;
+}
+
+.timer p {
+	margin: 0 .5em;
+}
+
+header {
+	margin: 1em 2em;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./mystyle.css">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Hello 😊, </h1>
+    </header>
+    <div id="container">
+        <div class="timer">
+            <p>Hours:</p>
+            <p>Minutes:</p>
+            <p>Seconds:</p>
+        </div>
+
+        <input id="hours" type="number" max="99" min="0" value="0" class="time">
+        <input id="minutes" type="number" max="60" min="0" value="0" class="time">
+        <input id="seconds" type="number" max="60" min="0" value="0" class="time">
+
+        <button id="start-button" class="btn">START</button>
+        <button id="reset-button" class="btn">RESET</button>
+    </div>
+
+
+    <section class="todo">
+        <div class="header">
+            <h2>To Do List: 🧾</h2>
+            <button id="signin" hidden>Sign in</button>
+
+        </div>
+        <div class="main">
+            <section class="makeNote">
+                <div class="createNote" contenteditable="true" placeholder="I need to work on....">
+
+                </div>
+                <button id="create">Add</button>
+            </section>
+
+            <section class="seeNotes">
+
+                <h1>Notes:</h1>
+                <div class="new-notes"></div>
+            </section>
+
+        </div>
+    </section>
+
+
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

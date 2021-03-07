@@ -1,18 +1,19 @@
 {
-    "name": "To-do/Reminder List",
-    "version": "1.0",
+
+    "name": "TabwithAuth2",
+    "description": "my ext",
+    "version": "0.1.0",
     "manifest_version": 2,
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js": ["content.js"]
-        }
-    ],
-    "browser_action": {
-        "default_popup": "index.html",
-        "default_title": "Pop Up Menu"
+    "background": {
+        "page": "background.html",
+        "persistent": false
+        
     },
-    "permissions": [
-        "storage"
-    ]
+    "options_page": "",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    
+    "content_security_policy": "script-src 'self' https://cdn.firebase.com https://apis.google.com https://www.gstatic.com; object-src 'self'"
 }
