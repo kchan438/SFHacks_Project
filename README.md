@@ -1,4 +1,4 @@
-# SFHacks_Project
+# SFHacks_Project 2021
 
 ## Inspiration
 Getting lazy and unproductive, we wanted a one stop solution to help out with this!
